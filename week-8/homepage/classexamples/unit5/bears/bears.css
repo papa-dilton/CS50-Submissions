@@ -1,0 +1,79 @@
+header {
+    width: 100%;
+}
+
+#polar,
+#sleepy,
+#grizzly,
+#panda {
+    display: none;
+}
+
+header h1 {
+    background-color: rgb(0, 225, 0);
+    color: #0E4F0C;
+    text-align: center;
+}
+
+header h1:hover {
+    cursor: pointer;
+}
+
+footer {
+    clear: both;
+    background-color: rgb(0, 100, 0);
+}
+
+button:link,
+button:visited {
+    color: black;
+    border-color: red;
+    background-color: yellow;
+}
+
+button:hover {
+    color: white;
+    border-color: yellow;
+    background-color: red;
+}
+
+button {
+    padding: 10px;
+    background-color: yellow;
+    margin: 5px;
+    color: black;
+    /*no bullets*/
+    list-style-type: none;
+    border: solid 2px red;
+    border-radius: 15px;
+    /*display:inline for horizontal buttons*/
+    display: block;
+    text-align: center;
+    width: 100px;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+nav {
+    float: left;
+    padding-top: 20px;
+}
+
+div {
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+    height: 400px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border: groove blue 10px;
+}
+
+body {
+    color: white;
+    background-color: green;
+}

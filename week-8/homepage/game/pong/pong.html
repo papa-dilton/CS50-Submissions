@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pong | Dalton Harrold</title>
+    <meta
+      name="description"
+      content="A game I've made using the p5.js library. Have some fun and see if your friends can beat your high score!"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      * {
+        font-family: "Sarpanch", sans-serif;
+        color: white;
+      }
+
+      body {
+        background-color: rgb(28, 28, 28);
+      }
+
+      .screen-small-err {
+        display: none;
+      }
+
+      .menu-cont {
+        display: block;
+        margin: auto;
+        align-items: center;
+      }
+      .menu-cont button,
+      .menu-cont select,
+      .menu-cont input {
+        background-color: rgb(28, 28, 28);
+        padding: 20px;
+        border: 2px white solid;
+        margin: 0px;
+      }
+
+      .menu-cont button:hover,
+      .menu-cont select:hover,
+      .menu-cont input:hover {
+        border: white 8px solid;
+        padding: 12px;
+      }
+
+      canvas {
+        border: 2px white solid;
+      }
+
+      /*Thanks to https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp for button hiding!*/
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      @media screen and (max-width:650px) {
+        #pong-canvas, .menu-cont {
+          display: none;
+        }
+        .screen-small-err {
+          display: contents;
+          color: black;
+        }
+      }
+    </style>
+  </head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  <script src="scripts.js"></script>
+
+  <body>
+    <div class="screen-small-err"><h1>Uh-Oh! It looks like your screen is too small to display the game. Please either view this on a desktop or resize your window!</h1></div>
+    <div id="pong-canvas"></div>
+    <div class="menu-cont">
+      <button onclick="toggleAI()">Toggle NPC</button>
+      <button onclick="resetGame()">Reset</button>
+      <button onclick="scoring = !scoring; resetGame();">Toggle Scoring</button>
+      <label for="ai-level">NPC Level</label>
+      <select
+        name="ai-level"
+        id="ai-level"
+        onchange="changeAILevel(this.value)"
+      >
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" selected>4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <br />
+      <label for="player-speed-box">Player Speed:</label>
+      <input
+        type="number"
+        name="player-speed-box"
+        id="player-speed-box"
+        min="0.1"
+        max="100"
+        inputmode="decimal"
+        placeholder="Player Speed"
+        value="3"
+        onchange="playerSpeed = parseInt(this.value)"
+      />
+
+      <label for="ball-speed-box">Ball Speed:</label>
+      <input
+        type="number"
+        name="ball-speed-box"
+        id="ball-speed-box"
+        min="0.1"
+        max="100"
+        inputmode="decimal"
+        placeholder="Player Speed"
+        value="3"
+        onchange="xStep = yStep = parseInt(this.value)"
+      />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dalton Harrold's Homepage</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="og:title" content="Dalton Harrold's Homepage" />
+    <meta name="theme-color" content="#1c1c1c">
+    <link rel="stylesheet" href="homepage/style.css" />
+    <a href="message-to-you.txt" style="display: none;">Hello, there</a>
+    <link rel="stylesheet" href="homepage/projects.css">
+    <link rel="stylesheet" href="homepage/spiro.css">
+</head>
+
+<body onload="console.log(getCookie('name'))">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div class="spiro-cont" style="background-color: #1c1c1c;">
+        <h1>Dalton Harrold</h1>
+        <div class="spiro"></div>
+    </div>
+
+
+    <header class="shrink">
+        <div class="logo-container">
+            <h4 class="logo">Dalton Harrold</h4>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="homepage/projects.html">Projects</a></li>
+                <li><a class="nav-link" href="about/aboutme.html">About Me</a></li>
+                <li><a class="nav-link" href="schedule/schedule.html">Schedule</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <input class="checkbox" type="checkbox" id="burgerCheck" onclick="burgerMenu()" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+        </nav>
+    </header>
+
+
+    <!--<canvas id=c></canvas>-->
+
+
+
+
+
+    <div class="content-div">
+        <div class="but-frame">
+            <div class="banner-recipe">Lemon Parmesan Chicken</div>
+            <img src="https://cafedelites.com/wp-content/uploads/2017/10/Creamy-Lemon-Parmesan-Chicken-Piccatta-IMAGE-8-1365x2048.jpg" width="100%" height="225px">
+            <a target="_blank" rel="noreferrer" href="classexamples/unit1/page2.html"><button type="button">Go to Recipe Page</button></a>
+        </div>
+
+        <div class="but-frame">
+            <div class="banner-top5">Top Five Foods</div>
+            <img src="top5/assets/top-image.jpeg" width="100%" height="225px">
+            <a target="_blank" rel="noreferrer" href="top5/top5.html"><button type="button">Go to Top Five Page</button></a>
+        </div>
+
+        <div class="but-frame">
+            <div class="banner-travel">Zürch, Switzerland</div>
+            <img src="travel/blue-zurich-med.jpg" width="100%" height="225px">
+            <a target="_blank" rel="noreferrer" href="travel/travel.html"><button type="button">Go to Travel Page</button></a>
+        </div>
+
+        <div class="but-frame">
+            <div class="banner-store">CRACKED GAMES</div>
+            <img src="store/portal-3.jpg" width="100%" height="225px">
+            <a target="_blank" rel="noreferrer" href="store/store.html"><button type="button">Go to Store Page</button></a>
+        </div>
+
+        <div class="but-frame">
+            <div class="banner-quiz">1995 Quiz</div>
+            <img src="quiz/Windows-95-feature.jpg" width="100%" height="225px">
+            <a target="_blank" rel="noreferrer" href="quiz/jsquiz.html"><button type="button">Go to Quiz Page</button></a>
+        </div>
+
+        <div class="but-frame">
+            <div class="banner-game">Pong Recreation</div>
+            <img src="../game/pong/assets/screen-shot.png" width="100%" height="225px">
+            <a target="_blank" rel="noreferrer" href="../game/pong/pong.html"><button type="button">Go to Game Page</button></a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-menu">
+            <ul class="footer-list">
+                <li><a class="footer-item" href="homepage/in-dev/developing.html">Contact Me</a></li>
+                <li><a class="footer-item" href="homepage/cookies.html">Cookie Policy</a></li>
+                <li><a rel="license" class="footer-item" href="homepage/legal.html">Legal</a></li>
+                <li><a class="footer-item" href="homepage/site-map.html">Site Map</a></li>
+            </ul>
+        </div>
+        <p>&copy;2022 Dalton Harrold</p>
+    </footer>
+    <script src="homepage/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" defer></script>
+    <script src="homepage/spirograph.js"></script>
+    <script defer>
+        var header = document.querySelector('header');
+        var spiro = document.querySelector('.spiro-cont');
+        var themeMeta = document.querySelector('meta[name="description"]');
+        window.onscroll = function() {
+            if (window.pageYOffset < document.querySelector('.spiro').clientHeight) {
+                header.classList.remove("down");
+                spiro.style.margin = "0px 0px 0px 0px"
+                themeMeta.setAttribute("content", "#1c1c1c")
+            } else {
+                header.classList.add("down");
+                spiro.style.margin = "0px 0px 10vh 0px"
+                themeMeta.setAttribute("content", "#191970")
+                    // add "15vh" if window is in super-mobile
+            }
+        }
+    </script>
+</body>
+
+</html>

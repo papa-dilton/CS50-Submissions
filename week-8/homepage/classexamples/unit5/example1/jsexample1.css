@@ -1,0 +1,53 @@
+h2 {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: darkblue;
+    background-color: lightgreen;
+    border: 3px groove lightblue;
+}
+
+#welcome {
+    font-size: 24px;
+}
+
+body {
+    font-family: "Palatino", serif;
+    color: blue;
+    background-color: #DAFFD6;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    float: left;
+    border: 3px groove lightblue;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.linkimg {
+    clear: both;
+    height: 50px;
+    width: auto;
+    border: 0;
+    margin-top: 20px;
+}
+
+table {
+    float: left;
+    text-align: right;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+
+p {
+    text-align: left;
+}

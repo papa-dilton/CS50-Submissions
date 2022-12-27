@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>What's Your Name?</title>
+    <meta name="description" content="A quick survey page that asks for your name to customize your webpage experince!">
+    <meta name="theme-color" content="#191970">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        #main-stuff h1 {
+            text-align: center;
+            margin: 40px;
+        }
+        
+        #main-stuff h3 {
+            margin: 0px 80px 0px 80px;
+        }
+        
+        .input-area {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header>
+        <div class="logo-container">
+            <h4 class="logo">Dalton Harrold</h4>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="../index.html">Home</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="../about/aboutme.html">About Me</a></li>
+                <li><a class="nav-link" href="../schedule/schedule.html">Schedule</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <input class="checkbox" type="checkbox" id="burgerCheck" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+        </nav>
+    </header>
+    <div id="main-stuff">
+        <h1>What's your name?</h1>
+        <h3>I'd like to know your name to improve your website experience! This information is not shared with me, and is stored locally, so I have no acces to it. If you don't want to share it either way, Please lick the 'No, thank you' button to dismiss
+            this page from coming up again. I'm looking forward to meeting you!</h3>
+        <div class="input-area">
+            <input type="text" id="inputy"></input>
+            <button type="button" id="subBut">Submit</button>
+            <button type="button" id="noBut">No, Thanks</button>
+        </div>
+
+        <h4 id="greetingBox"></h4>
+
+    </div>
+
+    <footer>
+        <div class="footer-menu">
+            <ul class="footer-list">
+                <li><a class="footer-item" href="in-dev/developing.html">Contact Me</a></li>
+                <li><a class="footer-item" href="cookies.html">Cookie Policy</a></li>
+                <li><a rel="license" class="footer-item" href="legal.html">Legal</a></li>
+                <li><a class="footer-item" href="site-map.html">Site Map</a></li>
+            </ul>
+        </div>
+        <p>&copy;2021 Dalton Harrold</p>
+    </footer>
+
+    <script>
+        const inputEl = document.getElementById("inputy")
+        const subBut = document.getElementById("subBut")
+        subBut.onclick = function() {
+            document.cookie = "name=" + inputEl.value;
+            var userName = getCookie("name");
+            document.getElementById('greetingBox').innerHTML = 'Hello, there, ' + userName + '!';
+
+
+            function getCookie(name) {
+                name += "="
+                const cookieArray = document.cookie.split('; ');
+                let toReturn;
+                cookieArray.forEach(value => {
+                    if (value.indexOf(name) == 0) toReturn = value.substring(name.length);
+                })
+                return toReturn;
+            }
+        }
+    </script>
+    <script src="script.js" async defer></script>
+</body>
+
+</html>

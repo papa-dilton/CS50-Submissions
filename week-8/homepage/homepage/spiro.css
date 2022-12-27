@@ -1,0 +1,50 @@
+.spiro-cont {
+    display: grid;
+    margin-bottom: 0px;
+}
+
+.spiro {
+    width: var(--scrollbar-width);
+    height: 100vh;
+    z-index: 0;
+    display: block;
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/*
+@media only screen and (max-width: 1000px) {
+    .spiro {
+        width: 100vw;
+    }
+}
+*/
+
+.spiro-cont h1 {
+    color: white;
+    text-align: center;
+    display: block;
+    margin: auto;
+    position: relative;
+    font-size: 48pt;
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #1c1c1c;
+    border: #1c1c1c 5px solid;
+    border-radius: 30px;
+    animation: fadeUpIn ease-out 1.5s;
+    z-index: 1;
+}
+
+@keyframes fadeUpIn {
+    0% {
+        opacity: 0;
+        top: 20px;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}

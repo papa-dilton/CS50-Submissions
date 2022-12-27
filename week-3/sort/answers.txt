@@ -1,0 +1,11 @@
+sort1 uses: bubble
+
+How do you know?: Takes a long time reversed (same as 3), but much shorter on pre-sorted values
+
+sort2 uses: merge
+
+How do you know?: much faster on large sets
+
+sort3 uses: selectionw
+
+How do you know?: much slower than others, even on sorted sets

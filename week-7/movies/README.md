@@ -1,0 +1,2 @@
+# movies.db
+The file `movies.db` is compressed into a ZIP archive as GitHub does not allow uploads of over 100 MB files without using their LFS subscription. To work with the data in the problem set, unzip it first. 

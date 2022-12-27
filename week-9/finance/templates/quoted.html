@@ -1,0 +1,11 @@
+{% extends "quote.html" %}
+
+{% block stockInfo %}
+
+    <div class="mb-3">
+            <h4>{{ company }}</h4>
+            <p>Ticker: {{ ticker }}</p>
+            <p>Stock price: {{ price }}</p>
+    </div>
+
+{% endblock %}

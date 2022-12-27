@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <h1>Sell Stocks</h1>
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            {% for stock in portfolio %}
+                <input type="radio" name="symbol" id="{{ stock['stock'] }}" value="{{ stock['stock'] }}">
+                <label for="{{ stock['stock'] }}"><strong>{{ stock['stock'].upper() }}</strong> - {{ stock['shares'] }} shares</label>
+            {% endfor %}
+            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares to sell" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{% endblock %}

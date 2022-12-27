@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Store | Dalton Harrold</title>
+    <meta name="description" content="A test store in which you can buy a multitude of different games that have not released yet! Fun titles like Half-Life 3, Madden Infinite, Portal 3,'' and Minecraft 2.0!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="store.css" />
+    <!--<link rel="stylesheet" href="../homepage/style.css">-->
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <nav>
+        <h1>CRACKED<br />GAMES</h1>
+    </nav>
+
+    <div class="but-row">
+        <ul>
+            <li><button class="selector" onclick="changeDiv('hl3');">Half-Life 3</button></li>
+            <li><button class="selector" onclick="changeDiv('mc2');">Minecraft 2</button></li>
+            <li><button class="selector" onclick="changeDiv('madden');">Madden Infinity</button></li>
+            <li><button class="selector" onclick="changeDiv('portal3');">Portal 3</button></li>
+        </ul>
+    </div>
+
+    <div id="store-item-hl3">
+        <a href="https://half-life.com/en/home"><img width="300px" src="hl3-cover.png" alt="Rendered cover for a new edition of the Half-life series" id="hl3mountian"></a>
+        <div class="textbox">
+            <h4>Half-Life 3</h4>
+            <p>As one of the greatest games fo all time, it should be no surprise that all along, VALVE has been working on a sequel to Half-Life 2. While not even released on Steam, We have obtained a pre-alpha distribution from the dvelopers through means
+                we will not discuss here. Purchace now to recive all updates, even after the game releases!</p>
+        </div>
+        <img width="300px" src="hl3-cover2.jpg" alt="Rendered cover for a new edition of the Half-life series">
+        <div><button class="buy-but">$200</button></div>
+    </div>
+    <div id="store-item-mc2">
+        <img src="mc-shaders-title.jpg" alt="A beautiful sunset in the game Minecraft, modified to be hyper realistic.">
+        <div class="textbox">
+            <h4>Minecraft 2</h4>
+            <p>With Mojang merging into Microsoft, it was only a matter of time before Bill Gates started work on another game that he and Microsoft could put onto Xbox Game Pass. After Minecraft : Story Mode and Minceaft Dungeons showed promising results,
+                they're finally working on a sequel to the main game.</p>
+        </div>
+        <div><button class="buy-but">$125</button></div>
+
+    </div>
+
+    <div id="store-item-madden">
+        <img src="madden-cover.png" alt="A photoshopped image of a concept for a madden game that contiuously updates">
+        <div class="textbox">
+            <h4>Madden Infinite</h4>
+            <p>Due purely to popular demand, EA sports has ben toying with the idea of releasing one edition of Madden that gets periodic updates to rosters and stats, so that patorns no longer need to purchase the game again every year. There are currently
+                no plans to release this (no the surprise of nobody), but developers continue to update this channel so company employees (and you) can play for years to come!</p>
+        </div>
+        <div><button class="buy-but">$120</button></div>
+    </div>
+    <div id="store-item-portal3">
+        <img id="chell" src="portal-3.jpg" alt="Rendered cover image for Portal 3 with Chell holding a portal gun">
+        <img id="p3menu" src="portal-3-menu.jpg" alt="Concept menu for a Portal 2 sequel - Portal 3">
+        <div class="textbox">
+            <h4>Portal 3</h4>
+            <p>Valve is back at it again! With Gabe Newell working on both Half-Life 3 and Portal 3 at the same time, it seems as if his creative juices have once again begun to flow. In this exciting new sequel, see how Chell deals with the new situations
+                in Aperture Science laboratores and GLADoS's plans...</p>
+
+        </div>
+        <div><button class="buy-but">$120</button></div>
+    </div>
+
+    <div class="carousel"></div>
+    <footer>
+
+        <p>Please check the box below to verify you will not share this website with any government authority or agency. Checking it also signifies that you understand this website was made for educational purposes and all products are not real. All images
+            and media are properties of their rightful owners.</p>
+        <button onclick="document.querySelector('footer').innerHTML += '<h1>Thank you.</h1>'">I Understand</button>
+    </footer>
+    <!--
+    sources :
+minecraft cover - https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291396-1-7-10-1-18-1-sildurs-shaders-pc-mac-intel
+Minecraft typeface - https://textcraft.net/
+Portal 3 cover - https://masterherald.com/portal-3-rumored-release-date-before-the-end-of-the-year-very-unlikely-as-valve-is-still-not-making-any-announcement-about-it/51033/
+Portal 3 menu - http://www.youtube.com/watch?v=MpjE3sXjvEc
+madden-infinity - https://www.tumblr.com/tagged/infinity%20symbol?sort=top
+madden-logo - https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/EA_Sports_Madden_NFL_logo_(no_year).png/375px-EA_Sports_Madden_NFL_logo_(no_year).png
+madden-bkg - https://www.dreamstime.com/photos-images/nfl-football-ball.html
+
+-->
+    <script src="store.js" async defer></script>
+    <script src="../homepage/script.js" async defer></script>
+    <script src="store-decoded.js" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+/*style to apply to EVERYTHING on the page  */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*float: left;*/
+
+h1 {
+    font-size: 10vw;
+    border: 3px green solid;
+}
+
+h2 {
+    font-size: 5vw;
+    border: 3px blue solid;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.freshrow {
+    clear: both;
+}
+
+div {
+    margin: 4vw;
+    padding: 15px;
+    width: 40%;
+    border: 2px gray groove;
+    font-size: 3vw;
+    float: left;
+}

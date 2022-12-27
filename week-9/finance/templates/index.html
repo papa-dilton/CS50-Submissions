@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Account Worth: {{ total_worth }}</h1>
+    <h4>Stock value: {{ worth }}</h4>
+    <h4>Cash value: {{ cash }}</h4>
+    {% if portfolio %}
+        <table>
+            <tr>
+                <th>Stock</th>
+                <th>Shares Owned</th>
+                <th>Worth</th>
+            </tr>
+            {% for stock in portfolio %}
+            <tr>
+                <td>{{ stock['stock'] }}</td>
+                <td>{{ stock['shares'] }}</td>
+                <td>{{ stock['price'] }}</td>
+                <td>
+                    <form action="/sell" method="post">
+                        <input name="symbol" type="hidden" value="{{ stock['stock'] }}">
+                        <input name="shares" type="hidden" value="{{ stock['shares'] }}">
+                        <input type="submit" value="Sell All">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}

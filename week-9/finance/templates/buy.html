@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <h1>Buy Stocks</h1>
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock Ticker" type="text">
+            <ul class="auto-complete"></ul>
+            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares to purchace" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+    <script src="/static/quote-autofill.js"></script>
+{% endblock %}

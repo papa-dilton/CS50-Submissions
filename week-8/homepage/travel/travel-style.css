@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+body {
+    margin-right: 10px;
+}
+
+.title-container {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24pt;
+    text-align: center;
+    /*from a gradient template by gradient hunt at https://gradienthunt.com/gradient/22423*/
+    background-image: linear-gradient( 109.6deg, rgba(255, 174, 0, 1) 11.2%, rgba(255, 0, 0, 1) 100.2%);
+}
+
+.main-pics {
+    box-shadow: 5px 5px 8px #888888;
+    display: block;
+    margin: 0px auto 0px auto;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 20px;
+    margin-left: 2%;
+    margin-top: 2%;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(109.6deg, rgba(255, 174, 0, 1) 11.2%, rgba(255, 0, 0, 1) 100.2%) 1;
+}
+
+.col-1 {
+    width: 25%;
+    height: 70vh;
+}
+
+.chocBut {
+    color: #ffffff;
+    background-image: linear-gradient( 109.6deg, rgba(255, 174, 0, 1) 11.2%, rgba(255, 0, 0, 1) 100.2%);
+    padding: 10px 20px 10px 20px;
+    font-weight: 600;
+    font-size: 14pt;
+    border: 0px;
+    /*https://dev.to/webdeasy/top-20-css-buttons-animations-f41 if time (#1)*/
+    display: block;
+}
+
+.chocBut:hover {
+    cursor: pointer;
+    animation: butHover 1s ease-out forwards;
+}
+
+@keyframes butHover {
+    to {
+        background-color: #00000000;
+        background-image: none;
+        color: #000000;
+        border: #000000 solid 2px;
+        font-weight: 400;
+    }
+}
+
+.col-2 {
+    width: 25%;
+    height: 70vh;
+}
+
+.col-3 {
+    width: 25%;
+    height: 70vh;
+}
+
+.inline-img {
+    width: 100%;
+}
+
+.col-home {
+    width: 90%;
+}
+
+@media only screen and (max-width:800px) {
+    [class*="col-"] {
+        width: 90%;
+    }
+}

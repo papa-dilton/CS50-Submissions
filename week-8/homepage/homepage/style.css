@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: #fff8dc;
+    font-family: 'Oswald', sans-serif;
+}
+
+.logo {
+    font-size: 5vh;
+    background-color: #191970;
+    display: flex 1;
+}
+
+.hamburger {
+    display: none;
+}
+
+.down {
+    position: fixed;
+}
+
+header {
+    background-color: #191970;
+    margin: 0px;
+    color: #ffffff;
+    display: flex;
+    height: 10vh;
+    padding: 0px 5% 0px 5%;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    z-index: 10;
+    width: 90%;
+}
+
+.logo-container {
+    flex: 2;
+    user-select: none;
+}
+
+nav {
+    flex: 3;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 5vh;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 200;
+    font-size: 12pt;
+    background-color: #191970;
+    padding: 15px 0px 30px 0px;
+}
+
+.footer-menu {
+    padding: 30px 0px 50px 0px;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.footer-item {
+    color: #ffffff;
+    font-size: 24pt;
+    text-decoration: none;
+    font-weight: 400;
+    margin: auto 10px auto 10px;
+    text-align: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+@media only screen and (max-width:1000px) {
+    header {
+        width: 90%;
+    }
+    .nav-links {
+        display: none;
+    }
+    /* Hamburger menu styling from alvarotrigo at https://codepen.io/alvarotrigo/pen/wvrzPWL*/
+    .hamburger {
+        display: contents;
+    }
+    nav .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 40px;
+        top: 26px;
+        right: 26px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+    nav .hamburger-lines {
+        display: block;
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    nav .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #ffffff;
+    }
+    nav .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    nav .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    nav .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .hamburger input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+    .hamburger input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    .hamburger input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+    .nav-links {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 50px;
+        background-color: #191970;
+    }
+}
+
+@media only screen and (min-width:1002px) {
+    .nav-links {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width:613px) {
+    header {
+        height: 20vh;
+    }
+    .footer-menu {
+        display: block;
+        margin: auto;
+    }
+    .footer-list {
+        display: block;
+        margin: 0px;
+    }
+    nav .hamburger-lines {
+        height: 9.5vh;
+        width: 12vh;
+        position: absolute;
+        top: 6vh;
+        right: 3vh;
+    }
+    nav .hamburger-lines .line {
+        height: 1.5vh;
+    }
+    nav .checkbox {
+        height: 9.5vh;
+        width: 12vh;
+        top: 6vh;
+        right: 3vh;
+    }
+    .nav-links {
+        top: 10vh;
+        right: 0px;
+    }
+}
+
+
+/*https://www.learnvaly.org/2021/09/css-animation-slide-from-top-bottom.html*/

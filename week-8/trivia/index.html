@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function grade1(lang, num) {
+                feedbackEl = document.querySelector("#feedback1")
+                if (lang == "JavaScript") {
+                    document.querySelector(`#q1a${num}`).style.backgroundColor = "green"
+                    feedbackEl.innerHTML = "Correct!"
+                } else {
+                    document.querySelector(`#q1a${num}`).style.backgroundColor = "red"
+                    feedbackEl.innerHTML = "Inorrect!"
+                }
+
+            }
+
+            function grade2() {
+                answerEl = document.querySelector("#answer2")
+                feedbackEl = document.querySelector("#feedback2")
+                //if incorrect answer
+                if (/^\.?forEach\(.*\)/g.exec(answerEl.value) == null) {
+                    feedbackEl.innerHTML = "Incorrect"
+                    answerEl.style.backgroundColor = "red"
+                } else {
+                    feedbackEl.innerHTML = "Correct!"
+                    answerEl.style.backgroundColor = "green"
+                }
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which language is the best out of the following?</h3>
+                <div class="answers">
+                    <button id="q1a1" class="answer" onclick="grade1(this.innerHTML, 1)">JavaScript</button>
+                    <button id="q1a2" class="answer" onclick="grade1(this.innerHTML, 2)">Python</button>
+                    <button id="q1a3" class="answer" onclick="grade1(this.innerHTML, 3)">Java</button>
+                    <p id="feedback1"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>To iterate through an array in ES6, what methood would you use?</h3>
+                <form onsubmit="grade2(); return false;">
+                    <input type="text" id="answer2" placeholder="Enter Response" autocomplete="off">
+                    <input type="submit">
+                </form>
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="hints.js"></script>
+    <script language="javascript" src="quiz_scripts.js">
+    </script>
+
+    <noscript>
+Your browser doesn't support JavaScript.
+</noscript>
+    <style type="text/css">
+        h6:hover {
+            cursor: pointer;
+        }
+        
+        body {
+            background-color: lightgray;
+        }
+        
+        input[type="text"] {
+            background: radial-gradient(circle, rgba(255, 219, 0, 1) 0%, rgba(255, 129, 0, 1) 100%);
+            border: 7px inset darkgray;
+        }
+        
+        input[type="button"] {
+            background: rgb(255, 219, 0);
+            background: radial-gradient(circle, rgba(255, 219, 0, 1) 0%, rgba(255, 129, 0, 1) 100%);
+            border: orangered 4px solid;
+            padding: 20px;
+            border-radius: 50%;
+            box-shadow: black 5px 5px 10px;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]:single-button~* {
+            transition: rotate 1s infinite;
+        }
+        
+        @keyframes rotate {
+            50% {
+                transform: rotate(180);
+            }
+            100% {
+                transform: rotate(0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    Please enter your name: <input type="text" id="namebox" onblur="greet()">
+    <h2 id="welcome"></h2>
+    <h3><strong>Who plays Alan Parrish in this year's hit movie, Jumanji?</strong></h3>
+    <input type="radio" name="q1" onclick="tally(1, 'a')">A. Robin Williams
+    <br><input type="radio" name="q1" onclick="tally(1, 'b')">B. Jonathan Hyde
+    <br><input type="radio" name="q1" onclick="tally(1, 'c')">C. Bradley Pierce
+    <br><input type="radio" name="q1" onclick="tally(1, 'd')">D. Malcolm Stewart
+
+    <h6><strong>HINT</strong></h6>
+    <p class="hint">He was also the main character in A Night at the Museum.</p>
+
+    <h3><strong>Who won People magazine's Sexiest Man Alive award this year?</strong></h3>
+    <input type="radio" name="q2" onclick="tally(2, 'a')">A. Hugh Grant
+    <br><input type="radio" name="q2" onclick="tally(2, 'b')">B. Keanu Reeves
+    <br><input type="radio" name="q2" onclick="tally(2, 'c')">C. Brad Pitt
+    <br><input type="radio" name="q2" onclick="tally(2, 'd')">D. Jim Carrey
+
+
+    <h6><strong>HINT</strong></h6>
+    <p class="hint">He starred in both Se7en and 12 Monkeys</p>
+
+    <h3><strong>We all know co-founder of Microsoft Bill Gates, but who was the other co-founder of the company taking compters to the next level?</strong></h3>
+    <input type="radio" name="q3" onclick="tally(3, 'a')">A. Michael Collins
+    <br><input type="radio" name="q3" onclick="tally(3, 'b')">B. Ronald Wayne
+    <br><input type="radio" name="q3" onclick="tally(3, 'c')">C. Steve Jobs
+    <br><input type="radio" name="q3" onclick="tally(3, 'd')">D. Paul Allen
+
+
+    <h6><strong>HINT</strong></h6>
+    <p class="hint">He also owns the Seattle trailblazers and seems interested in buying the Seahawks!</p>
+
+
+    <h3><strong>What is the name of the new internet auctioning website, where items are sold by people, not a company?</strong></h3>
+    <input type="radio" name="q4" onclick="tally(4, 'a')">A. Bid Site
+    <br><input type="radio" name="q4" onclick="tally(4, 'b')">B. AuctionWeb
+    <br><input type="radio" name="q4" onclick="tally(4, 'c')">C. E-Bay
+    <br><input type="radio" name="q4" onclick="tally(4, 'd')">D. PeopleSell
+
+
+    <h6><strong>HINT</strong></h6>
+    <p class="hint">Its founder, Pierre Omidyar is a world-class programmer and has made the site's functionality like something from tomorrow.</p>
+
+    <h3><strong>What new medical invention was recently approved by the FDA that will have a positive impact on American health?</strong></h3>
+    <input type="radio" name="q5" onclick="tally(5, 'a')">A. Chicken pox vaccine
+    <br><input type="radio" name="q5" onclick="tally(5, 'b')">B. Flu antiviral
+    <br><input type="radio" name="q5" onclick="tally(5, 'c')">C. Super-bug antibiotics
+    <br><input type="radio" name="q5" onclick="tally(5, 'd')">D. Targeted chemotherapy
+
+    <h6><strong>HINT</strong></h6>
+    <p class="hint">This invention helps fight a disease typically assoiated with shingles</p>
+
+    <input type="button" onclick="clearForm()" size="30" value="Reset">
+    <input type="button" onclick="scoreIt()" size="30" value="Score">
+    <!--<input type="button" onclick="changeColors()" size="30" value="Change Colors">-->
+    <br><br>
+    <h4 id="results"></h4>
+
+
+</body>
+
+</html>

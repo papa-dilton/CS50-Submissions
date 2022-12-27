@@ -1,0 +1,46 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+.blue
+{
+    color: #537fbe;
+}
+.red
+{
+    color: #ea433b;
+}
+.yellow
+{
+    color: #f5b82e;
+}
+.green
+{
+    color: #2e944b;
+}
+
+.auto-complete {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    margin-block-end: 0px;
+}
+
+.auto-complete button {
+    width: 206px;
+    padding: 6px 12px;
+    border: solid 1px darkgrey;
+}
+
+.auto-complete button:hover {
+    background-color: darkgrey;
+}
+
+#symbol {
+    width: 180px;
+}
+

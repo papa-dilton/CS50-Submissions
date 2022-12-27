@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="jsexample1.css">
+
+
+</head>
+
+<body>
+
+    <h2>What Can <a title="(The best programming language)">JavaScript</a> Do?</h2>
+
+
+
+    <table>
+        <tr>
+            <td colspan=2>
+                <p id="welcome">&nbsp</p>
+        </tr>
+
+        <tr>
+            <td>Enter your name:
+                <td><input type="text" id="nametxt" onblur="greet(nametxt.value)"></input>
+        </tr>
+
+        <tr>
+            <td>Enter a number:
+                <td><input type="number" id="num1"></input>
+
+        </tr>
+        <tr>
+            <td>Enter a second number:
+                <td><input type="number" id="num2"></input>
+                </td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="calc('/')">/</button>
+                <button type="button" onclick="calc('-')">-</button>
+                <button type="button" onclick="calc('%')">%</button>
+                <button type="button" onclick="calc('*')">*</button>
+                <button type="button" onclick="calc('+')">+</button>
+                <td><button type="button" onclick="resetPage()">Reset Page</button>
+        </tr>
+
+        <tr>
+            <td>
+                <p id="ans1">&nbsp</p>
+                <td>
+                    <p id="ans2">&nbsp</p>
+
+                    <tr>
+                        <td><button type="button" onclick="document.getElementById('pets').src='kittens.jpg';">Kittens!</button>
+                            <td><button type="button" id="pupBut" onclick="document.getElementById('pets').src='puppies.jpg';">Puppies!</button>
+                    </tr>
+        </tr>
+
+
+    </table>
+    <img id="pets" src="puppycat.jpg" onmouseover="document.getElementById('welcome').innerHTML = 'your mouse went over the image.'" onmouseout="document.getElementById('welcome').innerHTML = 'your mouse left the image.'">
+
+    <a target="_blank" rel="noreferrer" href="https://www.ecosia.org/search?q=fish"><img id="fish" class="linkimg" src="fishie.png" onmouseover="document.getElementById('fish').src = 'fishie2.png';" onmouseout="document.getElementById('fish').src = 'fishie.png'"></a>
+    <script src="jsexample1.js"></script>
+</body>
+
+</html>
